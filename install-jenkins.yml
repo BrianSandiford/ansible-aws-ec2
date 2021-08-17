@@ -1,0 +1,42 @@
+--- 
+- 
+  become: true
+  become_user: root
+  hosts: target
+  remote_user: ec2-user
+  tasks: 
+    - 
+      name: "yum update"
+      yum: 
+        name: "*"
+        state: latest
+    - 
+      get_url: 
+        dest: /etc/yum.repos.d/jenkins.repo
+        url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+      name: "Download Long Term Jenkins release"
+    - 
+      ansible.builtin.rpm_key: 
+        key: "https://pkg.jenkins.io/redhat-stable/jenkins.io.key"
+        state: present
+      name: "Import jenkins key from url"
+    - 
+      name: "Install jenkins"
+      yum: 
+        name: jenkins
+        state: latest
+    - 
+      name: "Install java"
+      yum: 
+        name: java-1.8.0-openjdk-devel
+        state: present
+    - 
+      ansible.builtin.systemd: 
+        daemon_reload: true
+      name: "daemon-reload to pick up config changes"
+    - 
+      ansible.builtin.systemd: 
+        name: jenkins
+        state: started
+      name: "Start jenkins"
+
