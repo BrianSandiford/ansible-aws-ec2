@@ -31,6 +31,13 @@ Ansible version 2.9.24 and Python version 2.7.17 used
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/my_aws
 ```
 
+# Create the Ansible directory structure
+```
+mkdir -p AWS_Ansible/group_vars/all/
+cd AWS_Ansible
+touch playbook.yml
+```
+
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
