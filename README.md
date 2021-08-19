@@ -12,7 +12,7 @@ The following steps will be performed:
 * Connect to the EC2 instance via SSH
 
 # Create AWS user
-Open the AWS [Console](https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2), search for IAM (Identity and Access Management) and follow this steps to create a user and take note of the Access Key and Secret Key that will be used by Ansible to set up the instances.
+Open the AWS [Console](https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2), search for IAM (Identity and Access Management) and follow these  [steps](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to create a user and take note of the Access Key and Secret Key that will be used by Ansible to set up the instances.
 
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 
