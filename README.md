@@ -25,6 +25,12 @@ pip install boto boto3 ansible
 ```
 
 Ansible version 2.9.24 and Python version 2.7.17 used
+
+# Create SSH keys to connect to the EC2 instance after provisioning
+```
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/my_aws
+```
+
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
