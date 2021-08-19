@@ -16,6 +16,8 @@ Open the AWS [Console](https://us-east-2.console.aws.amazon.com/console/home?reg
 
 # Install Ansible and the EC2 module dependencies
 
+Instructions on installing the latest version of ansible can be found [here](https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/)
+
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
