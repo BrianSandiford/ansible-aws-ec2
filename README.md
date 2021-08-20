@@ -78,6 +78,10 @@ For security, the playbook will execute by default just the tasks to collect inf
 ```
 ansible-playbook playbook.yml --ask-vault-pass
 ```
+##Get the public DNS
+```
+ansible-playbook playbook.yml --ask-vault-pass
+```
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
