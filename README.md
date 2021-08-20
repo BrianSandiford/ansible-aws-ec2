@@ -75,4 +75,8 @@ ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 ```
 For security, the playbook will execute by default just the tasks to collect information on AWS. The tasks responsible for provisioning the instance will be performed if the tag create_ec2 is specified.
 
+```
+ansible-playbook playbook.yml --ask-vault-pass
+```
+
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
