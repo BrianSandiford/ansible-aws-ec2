@@ -32,6 +32,8 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/my_aws
 ```
 Rename my_aws as my_aws.pem 
 
+# Clone this repository 
+
 # Create Ansible Vault file to store the AWS Access and Secret keys.
 ```
 ansible-vault create group_vars/all/pass.yml
