@@ -101,5 +101,23 @@ ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.ama
 ```
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 ```
-Note: The yum update portion could take up to 5 minutes. Don’t panic.
+Note: The yum update portion could take up to 5 minutes. 
+
+# Post-installation Jenkins Setup
+
+1. Navigate to http://<jenkins public ip>:8080 (replace <jenkins public ip> with your own)
+  ![unlock_jenkins](https://user-images.githubusercontent.com/67350852/130302988-78333c4c-34f2-49a9-88f8-7177869f9af3.png)
+  
+2. To get the automatically-generated password SSH into your Jenkins Instance and run the following:
+```
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+3. Copy and paste the output to Unlock Jenkins screen and click Continue.
+  
+4. Click Install suggested plugins.
+ 
+![unlock_jenkins](https://user-images.githubusercontent.com/67350852/130303122-bd084463-3565-4a18-bad7-c0cb4fa96815.png)
+
+    
+  
 
