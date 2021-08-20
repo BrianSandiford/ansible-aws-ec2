@@ -81,8 +81,12 @@ ansible-playbook playbook.yml --ask-vault-pass
 ```
 ![pubic_dns](https://user-images.githubusercontent.com/67350852/130295538-23899bc3-9154-429b-9023-1d428d49946a.png)
 
+# Connect to the EC2 instance via SSH
+```
+ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
+```
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 
 
-ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
+
