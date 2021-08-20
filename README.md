@@ -1,4 +1,4 @@
-![creat_instance](https://user-images.githubusercontent.com/67350852/130295118-27c5039a-59a3-4040-ac0f-0bf05fb5a9c8.png)
+
 # Using Ansible to provision AWS EC2 instances.
 
 Simple approach to use Ansible for provisioning an AWS EC2 instance.
@@ -72,6 +72,9 @@ For security, the playbook will execute by default just the tasks to collect inf
 ```
 ansible-playbook playbook.yml --ask-vault-pass
 ```
+
+![creat_instance](https://user-images.githubusercontent.com/67350852/130295118-27c5039a-59a3-4040-ac0f-0bf05fb5a9c8.png)
+
 ## Get the public DNS
 ```
 ansible-playbook playbook.yml --ask-vault-pass
