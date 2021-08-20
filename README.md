@@ -98,9 +98,8 @@ target ansible_host=<target private ip>
 ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
 ```
 2. To run the Ansible Playbook targeting the Jenkins Instance run the following:
-
-
+```
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
-
+```
 
 
