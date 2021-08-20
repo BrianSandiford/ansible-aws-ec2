@@ -67,13 +67,10 @@ ec2_secret_key: afjdfadgf$fgajk5ragesfjgjsfdbtirhf
 ```
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 ```
-For security, the playbook will execute by default just the tasks to collect information on AWS. The tasks responsible for provisioning the instance will be performed if the tag create_ec2 is specified.
-
-```
-ansible-playbook playbook.yml --ask-vault-pass
-```
 
 ![creat_instance](https://user-images.githubusercontent.com/67350852/130295118-27c5039a-59a3-4040-ac0f-0bf05fb5a9c8.png)
+
+For security, the playbook will execute by default just the tasks to collect information on AWS. The tasks responsible for provisioning the instance will be performed if the tag create_ec2 is specified.
 
 ## Get the public DNS
 ```
