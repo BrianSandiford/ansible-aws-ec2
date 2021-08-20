@@ -57,6 +57,16 @@ ec2_access_key: AAAAAAAAAAAAAABBBBBBBBBBBB
 ec2_secret_key: afjdfadgf$fgajk5ragesfjgjsfdbtirhf
 ```
 
+## Directory structure
+```
+➜  AWS_Ansible tree
+.
+├── group_vars
+│   └── all
+│       └── pass.yml
+└── playbook.yml
+2 directories, 2 files
+```
 
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 
