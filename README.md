@@ -91,6 +91,9 @@ Edit the inventory.txt file and make sure to replace the private IP with your Je
 ```
 target ansible_host=<target private ip>
 ```
+# Running the Ansible Playbook
+
+1. Before we run the Ansible Playbook, we need to SSH into our Jenkins Instance and accept the finger print. If we don’t do this then we will encounter errors when we try and run our Ansible Playbook. Type yes when prompted.
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 
