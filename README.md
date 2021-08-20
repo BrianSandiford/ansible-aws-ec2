@@ -101,5 +101,5 @@ ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.ama
 ```
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 ```
-
+Note: The yum update portion could take up to 5 minutes. Don’t panic.
 
