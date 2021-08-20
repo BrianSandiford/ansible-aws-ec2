@@ -85,6 +85,8 @@ ansible-playbook playbook.yml --ask-vault-pass
 ```
 ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
 ```
+![ubuntu](https://user-images.githubusercontent.com/67350852/130296102-d3a8fbfb-8b95-4d0d-9e8e-b26767bef488.png)
+
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 
