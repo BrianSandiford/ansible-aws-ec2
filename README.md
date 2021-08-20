@@ -7,7 +7,6 @@ The following steps will be performed:
 * Create AWS user
 * Install Ansible and Ansible EC2 module dependencies
 * Create SSH keys
-* Create Ansible structure
 * Run Ansible to provision the EC2 instance
 * Connect to the EC2 instance via SSH
 
@@ -32,12 +31,6 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/my_aws
 ```
 Rename my_aws as my_aws.pem 
 
-# Create the Ansible directory structure
-```
-mkdir -p AWS_Ansible/group_vars/all/
-cd AWS_Ansible
-touch playbook.yml
-```
 # Create Ansible Vault file to store the AWS Access and Secret keys.
 ```
 ansible-vault create group_vars/all/pass.yml
