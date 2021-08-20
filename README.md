@@ -44,6 +44,20 @@ ansible-vault create group_vars/all/pass.yml
 New Vault password:
 Confirm New Vault password:
 ```
+
+The password provided here will be asked every time the playbook is executed or when editing the pass.yml file.
+
+# Edit the pass.yml file and create the keys global constants
+
+Create the variables ec2_access_key and ec2_secret_key and set the values gathered after user creation (IAM).
+```
+ansible-vault edit group_vars/all/pass.yml 
+Vault password:
+ec2_access_key: AAAAAAAAAAAAAABBBBBBBBBBBB                                      
+ec2_secret_key: afjdfadgf$fgajk5ragesfjgjsfdbtirhf
+```
+
+
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
