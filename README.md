@@ -1,7 +1,7 @@
 
 # Using Ansible to provision AWS EC2 instances.
 
-Simple approach to use Ansible for provisioning an AWS EC2 instance.
+Simple approach to use Ansible for provisioning an AWS EC2 instance.This README was adapted from a longer tutorial which you can view [here](https://medium.datadriveninvestor.com/devops-using-ansible-to-provision-aws-ec2-instances-3d70a1cb155f)
 
 The following steps will be performed:
 
@@ -31,6 +31,8 @@ Ansible version 2.9.24 and Python version 2.7.17 used
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/my_aws
 ```
 Rename my_aws as my_aws.pem 
+
+# Clone this repository 
 
 # Create Ansible Vault file to store the AWS Access and Secret keys.
 ```
@@ -67,13 +69,10 @@ ec2_secret_key: afjdfadgf$fgajk5ragesfjgjsfdbtirhf
 ```
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 ```
-For security, the playbook will execute by default just the tasks to collect information on AWS. The tasks responsible for provisioning the instance will be performed if the tag create_ec2 is specified.
-
-```
-ansible-playbook playbook.yml --ask-vault-pass
-```
 
 ![creat_instance](https://user-images.githubusercontent.com/67350852/130295118-27c5039a-59a3-4040-ac0f-0bf05fb5a9c8.png)
+
+For security, the playbook will execute by default just the tasks to collect information on AWS. The tasks responsible for provisioning the instance will be performed if the tag create_ec2 is specified.
 
 ## Get the public DNS
 ```
@@ -87,8 +86,39 @@ ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.ama
 ```
 ![ubuntu](https://user-images.githubusercontent.com/67350852/130296102-d3a8fbfb-8b95-4d0d-9e8e-b26767bef488.png)
 
+# Ansible Inventory File
+Edit the inventory.txt file and make sure to replace the private IP with your Jenkins instance (instance created above) private IP address
+```
+target ansible_host=<target private ip>
+```
+# Running the Ansible Playbook
 
+1. Before we run the Ansible Playbook, we need to SSH into our Jenkins Instance and accept the finger print. If we don’t do this then we will encounter errors when we try and run our Ansible Playbook. Type yes when prompted.
+```
+ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
+```
+2. To run the Ansible Playbook targeting the Jenkins Instance run the following:
+```
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
+```
+Note: The yum update portion could take up to 5 minutes. 
 
+# Post-installation Jenkins Setup
 
+1. Navigate to http://< jenkins public ip >:8080 (replace < jenkins public ip > with your own)
+  
+  ![unlock_jenkins](https://user-images.githubusercontent.com/67350852/130302988-78333c4c-34f2-49a9-88f8-7177869f9af3.png)
+  
+2. To get the automatically-generated password SSH into your Jenkins Instance and run the following:
+```
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+3. Copy and paste the output to Unlock Jenkins screen and click Continue.
+  
+4. Click Install suggested plugins.
+ 
+![unlock_jenkins](https://user-images.githubusercontent.com/67350852/130303122-bd084463-3565-4a18-bad7-c0cb4fa96815.png)
+
+    
+  
 
