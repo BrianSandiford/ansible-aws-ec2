@@ -106,6 +106,7 @@ Note: The yum update portion could take up to 5 minutes.
 # Post-installation Jenkins Setup
 
 1. Navigate to http://<jenkins public ip>:8080 (replace <jenkins public ip> with your own)
+  
   ![unlock_jenkins](https://user-images.githubusercontent.com/67350852/130302988-78333c4c-34f2-49a9-88f8-7177869f9af3.png)
   
 2. To get the automatically-generated password SSH into your Jenkins Instance and run the following:
