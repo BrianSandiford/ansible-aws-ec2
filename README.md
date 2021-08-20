@@ -79,6 +79,8 @@ ansible-playbook playbook.yml --ask-vault-pass
 ```
 ansible-playbook playbook.yml --ask-vault-pass
 ```
+![pubic_dns](https://user-images.githubusercontent.com/67350852/130295538-23899bc3-9154-429b-9023-1d428d49946a.png)
+
 
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 
