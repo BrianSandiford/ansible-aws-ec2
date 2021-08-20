@@ -1,7 +1,7 @@
 
 # Using Ansible to provision AWS EC2 instances.
 
-Simple approach to use Ansible for provisioning an AWS EC2 instance.
+Simple approach to use Ansible for provisioning an AWS EC2 instance.This README was adapted from a longer tutorial which you can view [here](https://medium.datadriveninvestor.com/devops-using-ansible-to-provision-aws-ec2-instances-3d70a1cb155f)
 
 The following steps will be performed:
 
