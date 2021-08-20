@@ -78,7 +78,7 @@ For security, the playbook will execute by default just the tasks to collect inf
 ```
 ansible-playbook playbook.yml --ask-vault-pass
 ```
-##Get the public DNS
+## Get the public DNS
 ```
 ansible-playbook playbook.yml --ask-vault-pass
 ```
