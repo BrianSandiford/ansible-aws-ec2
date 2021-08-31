@@ -123,3 +123,5 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   
 dynamic inventory ping command ansible aws_ec2 -i aws_ec2.yml -u ec2-user -m ping --private-key=~/.ssh/my_aws.pem  --ask-vault-pass
 
+install packages script ansible-playbook install-jenkins.yml -i aws_ec2.yml --private-key=~/.ssh/my_aws.pem --ask-vault-pass
+

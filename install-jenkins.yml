@@ -2,7 +2,6 @@
 - 
   become: true
   become_user: root
-#  hosts: target
   hosts: aws_ec2
   remote_user: ec2-user
   tasks:
@@ -23,6 +22,12 @@
         key: "https://pkg.jenkins.io/redhat-stable/jenkins.io.key"
         state: present
       name: "Import jenkins key from url"
+
+    - name: "Install docker"
+      yum: name=docker state=present
+
+    - name: "start docker"
+      service: name=docker state=started enabled=yes
     - 
       name: "Install jenkins"
       yum: 
