@@ -25,7 +25,7 @@
 
     - name: "Install docker"
       yum: name=docker state=present
-
+  
     - name: "start docker"
       service: name=docker state=started enabled=yes
     - 
@@ -47,4 +47,11 @@
         name: jenkins
         state: started
       name: "Start jenkins"
+
+    - name: "add jenkins users to Docker Group"
+      command: usermod -aG docker jenkins
+
+    - name: "retart jenkins"
+      command: systemctl restart jenkins.service
+                               
 
