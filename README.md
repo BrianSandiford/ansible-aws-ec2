@@ -125,3 +125,5 @@ dynamic inventory ping command ansible aws_ec2 -i aws_ec2.yml -u ec2-user -m pin
 
 install packages script ansible-playbook install-jenkins.yml -i aws_ec2.yml --private-key=~/.ssh/my_aws.pem --ask-vault-pass
 
+install google chrome on amazon linux 2 sudo yum install -y chromium
+

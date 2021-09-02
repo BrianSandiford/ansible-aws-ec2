@@ -7,6 +7,8 @@
   tasks:
     - name: "activate epel"
       command : amazon-linux-extras install epel -y 
+   # - name: "enable epel for installation"
+   #   yum: name=epel-release state=present
     - 
       name: "yum update"
       yum: 
@@ -22,6 +24,9 @@
         key: "https://pkg.jenkins.io/redhat-stable/jenkins.io.key"
         state: present
       name: "Import jenkins key from url"
+   
+    - name: "install git"
+      yum: name=git state=present
 
     - name: "Install docker"
       yum: name=docker state=present
