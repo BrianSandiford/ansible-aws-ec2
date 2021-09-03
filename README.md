@@ -125,5 +125,21 @@ dynamic inventory ping command ansible aws_ec2 -i aws_ec2.yml -u ec2-user -m pin
 
 install packages script ansible-playbook install-jenkins.yml -i aws_ec2.yml --private-key=~/.ssh/my_aws.pem --ask-vault-pass
 
-install google chrome on amazon linux 2 sudo yum install -y chromium
+install chrome driver:
+
+sudo wget https://chromedriver.storage.googleapis.com/93.0.4577.15/chromedriver_linux64.zip
+
+sudo unzip chromedriver_linux64.zip
+sudo mv chromedriver /usr/bin/chromedriver
+chromedriver – version
+
+
+install google chrome on amazon linux 2 :
+	
+sudo curl https://intoli.com/install-google-chrome.sh | bash
+sudo mv /usr/bin/google-chrome-stable /usr/bin/google-chrome
+
+
+google-chrome --version && which google-chrome
+
 

@@ -9,7 +9,7 @@
     key_name: my_aws
     region: us-east-2
     image: ami-0443305dabd4be2bc  # https://cloud-images.ubuntu.com/locator/ec2/
-    id: "web-app_19"
+    id: "web-app_23"
     sec_group: "{{ id }}-jenkins-sec"
 
   tasks:
@@ -80,7 +80,6 @@
           count: 1
           # exact_count: 2
           # count_tag:
-          #   Name: App
           instance_tags:
               Name: Jenkins-Server
               Env: dev
