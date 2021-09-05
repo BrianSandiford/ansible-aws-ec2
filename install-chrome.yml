@@ -1,0 +1,51 @@
+--- 
+- 
+  hosts: aws_ec2
+  become: true
+  become_user: root
+  remote_user: ec2-user
+  tasks: 
+    - 
+      file: 
+        mode: 511
+        owner: root
+        path: /etc/yum.repos.d/google-chrome.repo
+        state: touch
+      name: "Creating a file with content"
+    - 
+      copy: 
+        content: "{{ mytext }}"
+        dest: /etc/yum.repos.d/google-chrome.repo
+      name: "create File content"
+    - 
+      name: "Install Chrome"
+      yum: 
+        name: google-chrome-stable
+        state: present
+        update_cache: true
+    - 
+      name: Epel-release
+      yum: 
+        name: epel-release
+        state: present
+        update_cache: true
+    - 
+      name: "install chromium"
+      yum: 
+        name: chromium
+        state: present
+    - 
+      name: chromedriver
+      yum: 
+        name: chromedriver
+        state: present
+  vars: 
+    mytext: |
+        [google-chrome]
+        name=google-chrome
+        baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+        enabled=1
+        gpgcheck=1
+        gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+    updatetest: ""
+

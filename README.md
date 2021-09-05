@@ -142,4 +142,7 @@ sudo mv /usr/bin/google-chrome-stable /usr/bin/google-chrome
 
 google-chrome --version && which google-chrome
 
+ansible playbook to install google chrome and chrome driver :
+
+https://www.edureka.co/community/63433/necessary-chromedriver-selenium-chromium-selenium-ansible
 

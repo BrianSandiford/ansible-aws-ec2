@@ -4,11 +4,11 @@
   become_user: root
   hosts: aws_ec2
   remote_user: ec2-user
+#  roles:
+#    - groks.repo-google
   tasks:
     - name: "activate epel"
       command : amazon-linux-extras install epel -y 
-   # - name: "enable epel for installation"
-   #   yum: name=epel-release state=present
     - 
       name: "yum update"
       yum: 
@@ -58,5 +58,6 @@
 
     - name: "retart jenkins"
       command: systemctl restart jenkins.service
-                               
 
+
+    
