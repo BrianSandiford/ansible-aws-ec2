@@ -74,3 +74,25 @@
 
     - name : "update path"
       shell: echo "export PATH=$PATH:/home/ec2-user/bin" > /etc/environment
+
+    - name: Create tmp directory if it does not exist
+      ansible.builtin.file:
+        path: /tmp
+        state: directory
+        mode: '0755'
+
+#    - name: "install eksctl"
+#      get_url: url=https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz dest=/tmp/eksctl
+
+#    - name: "untar eksctl package"
+#      shell: chdir=/tmp untar
+
+    - name: "install eksctl"
+      shell: curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+
+    - name: "extracted binary to /usr/local/bin"
+      command: mv /tmp/eksctl /usr/local/bin
+
+    - name : "update path"
+      shell: echo "export PATH=$PATH:/usr/local/bin/" > /etc/environment
+
