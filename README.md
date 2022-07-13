@@ -16,6 +16,7 @@ Open the AWS [Console](https://us-east-2.console.aws.amazon.com/console/home?reg
 
 # Install Ansible and the EC2 module dependencies
 
+**Please note**
 Instructions on installing the latest version of ansible can be found [here](https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/)
 
 Install pip and boto3
