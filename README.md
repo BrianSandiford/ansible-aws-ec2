@@ -17,6 +17,12 @@ Open the AWS [Console](https://us-east-2.console.aws.amazon.com/console/home?reg
 # Install Ansible and the EC2 module dependencies
 
 **Please note**
+* Ansible has to be installed on ubuntu ec2 instance..list version
+* document plugin for dynamic inventory
+* document installing specific ansible version in venv environment
+* document iam role to connect ubuntu instance to target server
+* document updating path to ssh key in playbook.yml
+* document updating  subnet playbook.yml
 Instructions on installing the latest version of ansible can be found [here](https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/)
 
 Install pip and boto3
