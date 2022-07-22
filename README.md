@@ -33,6 +33,8 @@ sudo apt install python-pip (**install pip**)
 pip3 install ansible==2.9.24
 ```
 
+## Dynamic inventory
+
 * document plugin for dynamic inventory
 * document iam role to connect ubuntu instance to target server
 * document updating path to ssh key in playbook.yml
