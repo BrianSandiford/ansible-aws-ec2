@@ -21,6 +21,17 @@ Ansible has to be installed on ubuntu ec2 instance (AMI ID ubuntu/images/hvm-ssd
 Anisble playbooks run on Ansible version 2.9.24
 
 To install specific version of Ansible first create and install vurtual environment
+``` 
+mkdir VENVS
+cd VENVS/
+sudo apt-get update
+sudo apt install python3.10-venv
+sudo python3 -m venv ansible2924
+cd ansible2924/
+source bin/activate
+sudo apt install python-pip (**install pip**)
+pip3 install ansible==2.9.24
+```
 
 * document plugin for dynamic inventory
 * document installing specific ansible version in venv environment
