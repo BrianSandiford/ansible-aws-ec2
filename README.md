@@ -34,6 +34,7 @@ pip3 install ansible==2.9.24
 ```
 
 ## Dynamic inventory
+As instances are created and ternimated their IP addresses would change.To keep track of the IP adresses of the nodes you are running ansible playbooks against dynamic inventory is used.
 
 * document plugin for dynamic inventory
 * document iam role to connect ubuntu instance to target server
