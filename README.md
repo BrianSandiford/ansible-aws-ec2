@@ -34,7 +34,6 @@ pip3 install ansible==2.9.24
 ```
 
 * document plugin for dynamic inventory
-* document installing specific ansible version in venv environment
 * document iam role to connect ubuntu instance to target server
 * document updating path to ssh key in playbook.yml
 * document updating  subnet playbook.yml
