@@ -17,6 +17,8 @@ Open the AWS [Console](https://us-east-2.console.aws.amazon.com/console/home?reg
 # Install Ansible and the EC2 module dependencies
 
 **Please note**
+Ansible has to be installed on ubuntu ec2 instance (AMI ID ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20220609 (ami-02f3416038bdb17fb) )
+
 * Ansible has to be installed on ubuntu ec2 instance..list version
 * document plugin for dynamic inventory
 * document installing specific ansible version in venv environment
