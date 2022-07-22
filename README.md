@@ -37,12 +37,12 @@ pip3 install ansible==2.9.24
 As instances are created and ternimated their IP addresses would change.To keep track of the IP adresses of the nodes you are running ansible playbooks against dynamic inventory is used.
 
 First.. install amazon ec2 pluggin `ansible-galaxy collection install amazon.aws`
-
+Detailed instructions can be found [here](https://docs.python.org/3/tutorial/venv.html)
 * document plugin for dynamic inventory
 * document iam role to connect ubuntu instance to target server
 * document updating path to ssh key in playbook.yml
 * document updating  subnet playbook.yml
-Instructions on installing the latest version of ansible can be found [here](https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/)
+Instructions on installing the latest version of ansible can be found [here](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html#examples)
 
 Install pip and boto3
 ``` 
