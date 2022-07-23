@@ -38,6 +38,7 @@ As instances are created and ternimated their IP addresses would change.To keep 
 
 First.. install amazon ec2 pluggin `ansible-galaxy collection install amazon.aws`
 Detailed instructions can be found [here](https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html#examples)
+
 clone this repo and cd into directory
 Install boto3 `pip install boto boto3 ansible `
 
