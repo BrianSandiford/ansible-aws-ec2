@@ -43,7 +43,9 @@ clone this repo and cd into directory
 
 Install boto3 `pip install boto boto3 ansible `
 
-Create an IAM Role named ansible-dynamic-inventory-pluggin with policy name AdministratorAccess.Attach role to ubuntu instance.
+Create an IAM Role named ansible-dynamic-inventory-pluggin with policy name AdministratorAccess. Instructions can be found [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#create-iam-role)
+
+Attach role to ubuntu instance. Instructions can be found [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#attach-iam-role)
 * document plugin for dynamic inventory
 * document iam role to connect ubuntu instance to target server
 * document updating path to ssh key in playbook.yml
