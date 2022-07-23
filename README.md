@@ -41,6 +41,7 @@ Detailed instructions can be found [here](https://docs.ansible.com/ansible/lates
 
 Install boto3 `pip install boto boto3 ansible `
 
+Create an IAM Role named ansible-dynamic-inventory-pluggin with policy name AdministratorAccess.Attach role to ubuntu instance.
 * document plugin for dynamic inventory
 * document iam role to connect ubuntu instance to target server
 * document updating path to ssh key in playbook.yml
