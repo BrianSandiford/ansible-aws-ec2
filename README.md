@@ -125,12 +125,19 @@ target ansible_host=<target private ip>
 
 1. Before we run the Ansible Playbook, we need to SSH into our Jenkins Instance and accept the finger print. If we don’t do this then we will encounter errors when we try and run our Ansible Playbook. Type yes when prompted.
 ```
-ssh -i ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
+ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.com
 ```
 2. To run the Ansible Playbook targeting the Jenkins Instance run the following:
+
+```
+ansible-playbook install-jenkins.yml -i aws_ec2.yml --private-key=~/.ssh/my_aws.pem --ask-vault-pass
+```
+<!---
 ```
 ansible-playbook install-jenkins.yml -i inventory.txt --private-key ~/.ssh/my_aws.pem  --ask-vault-pass 
 ```
+-->
+
 Note: The yum update portion could take up to 5 minutes. 
 
 # Post-installation Jenkins Setup
