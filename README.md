@@ -89,6 +89,9 @@ ec2_secret_key: afjdfadgf$fgajk5ragesfjgjsfdbtirhf
 
 # Running Ansible to provision instances
 ## Create the instance
+
+Set vpc_subnet_id: in playbook.yml to default aws subnet
+Increment  id: in playbook.yml by one
 ```
 ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
 ```
