@@ -156,7 +156,7 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
  
 ![unlock_jenkins](https://user-images.githubusercontent.com/67350852/130303122-bd084463-3565-4a18-bad7-c0cb4fa96815.png)
 
-    
+# Work in progress 
   
 dynamic inventory ping command ansible aws_ec2 -i aws_ec2.yml -u ec2-user -m ping --private-key=~/.ssh/my_aws.pem  --ask-vault-pass
 
