@@ -67,7 +67,7 @@ The password provided here will be asked every time the playbook is executed or 
 
 # Edit the pass.yml file and create the keys global constants
 
-Create the variables ec2_access_key and ec2_secret_key and set the values gathered after user creation (IAM).instructions can be found [here](https://www.youtube.com/watch?v=vucdm8BWFu0&t=118s)
+Create the variables ec2_access_key and ec2_secret_key and set the values gathered after user creation (IAM).Instructions can be found [here](https://www.youtube.com/watch?v=vucdm8BWFu0&t=118s)
 
 ```
 ansible-vault edit group_vars/all/pass.yml 
