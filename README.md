@@ -49,15 +49,6 @@ Attach role to ubuntu instance. Instructions can be found [here](https://docs.aw
 * document updating path to ssh key in playbook.yml
 * document updating  subnet playbook.yml
 
-
-
-
-Install pip and boto3
-``` 
-sudo apt install python-pip
-pip install boto boto3 ansible
-```
-
 Ansible version 2.9.24 and Python version 2.7.17 used
 
 # Create SSH keys to connect to the EC2 instance after provisioning
