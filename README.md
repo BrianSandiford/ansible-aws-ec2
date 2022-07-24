@@ -114,10 +114,12 @@ ssh -i ~/.ssh/my_aws.pem ec2-user@ec2-18-118-95-247.us-east-2.compute.amazonaws.
 ```
 ![ubuntu](https://user-images.githubusercontent.com/67350852/130296102-d3a8fbfb-8b95-4d0d-9e8e-b26767bef488.png)
 
- // # Ansible Inventory File
+<!---  # Ansible Inventory File
 Edit the inventory.txt file and make sure to replace the private IP with your Jenkins instance (instance created above) private IP address
 ```
 target ansible_host=<target private ip>
+-->
+
 ```
 # Running the Ansible Playbook
 
